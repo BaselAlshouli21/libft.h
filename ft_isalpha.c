@@ -6,7 +6,7 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 15:44:20 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/22 14:41:43 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/09/22 16:49:13 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ int	ft_isalpha(int c)
 		return (0);
 	}
 }
-/*
-int main(int argc, char **argv)
-{
-    printf("%d", ft_isalpha(*argv[1]));
-}
-*/

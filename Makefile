@@ -3,24 +3,34 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SRCS = $(wildcard *.c)
-OBJS = $(SRCS:%.c=%.o)
+OBJ_DIC = obj
+BIN_DIC = bin
 
-all: libft
+OBJS = $(SRCS:%.c=$(OBJ_DIC)/%.o)
 
-print:
-	echo $(OBJS)
+TARGET = $(BIN_DIC)/libft
 
-%.o: ./%.c
+all: $(TARGET)
+
+$(TARGET): $(OBJS) | $(BIN_DIC)
+	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
+
+run: all
+	./$(TARGET) $(ARGS)
+
+$(OBJ_DIC)/%.o: %.c | $(OBJ_DIC)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-libft: $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o libft
-
-run: libft
-	./libft $(ARGS)
-
+$(OBJ_DIC) $(BIN_DIC):
+	mkdir -p $@
+    
 clean:
-	rm *.o
+	rm -f $(OBJ_DIC)/*.o
 
-fclean:
-	rm *.o libft
+fclean: clean
+	rm -f $(TARGET)
+	rm -rf $(OBJ_DIC) $(BIN_DIC)
+
+re: fclean all
+
+.PHONY: all clean fclean re run

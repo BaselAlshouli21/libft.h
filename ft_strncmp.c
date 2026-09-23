@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 17:40:03 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/23 13:24:51 by balshoul         ###   ########.fr       */
+/*   Created: 2026/09/22 17:43:04 by balshoul          #+#    #+#             */
+/*   Updated: 2026/09/23 18:18:53 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= '0' && c <= '9')
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		return (1);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

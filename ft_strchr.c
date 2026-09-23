@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 17:40:03 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/23 13:24:51 by balshoul         ###   ########.fr       */
+/*   Created: 2026/09/22 17:13:58 by balshoul          #+#    #+#             */
+/*   Updated: 2026/09/22 17:50:02 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= '0' && c <= '9')
+	int	i;
+
+	i = 0;
+	while (s[i] != 0)
 	{
-		return (1);
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

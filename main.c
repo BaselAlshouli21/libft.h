@@ -6,14 +6,16 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:25:41 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/22 15:21:57 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/09/23 18:37:28 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdlib.h"
 
-int	main(int argc, const char **argv)
+int	main(void)
 {
-	(void)argc;
-	printf("%zu", ft_strlen("*argv[1]"));
+	char	str[] = "A_B_C";
+	
+	ft_bzero(str, ft_strlen(str));
 }
