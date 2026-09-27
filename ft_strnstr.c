@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/24 15:27:27 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/26 15:41:57 by balshoul         ###   ########.fr       */
+/*   Created: 2026/09/26 15:42:20 by balshoul          #+#    #+#             */
+/*   Updated: 2026/09/26 19:16:08 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	const unsigned char	*str1;
-	const unsigned char	*str2;
-	size_t				i;
+	size_t	i;
+	size_t	j;
+	char	*l;
+	char	*b;
 
-	str1 = (const unsigned char *)s1;
-	str2 = (const unsigned char *)s2;
+	l = (char *)little;
+	b = (char *)big;
 	i = 0;
-	if (!n)
-		return (0);
-	while (i < n && str1[i] == str2[i])
-		i++;
-	return (str1[i] - str2[i]);
+	while (b[i])
+	{
+		j = 0;
+		while ((b[i] == l[j]) && (i < len) && l[j])
+		{
+			i++;
+			j++;
+		}
+		if (!l[j])
+			return (&b[i - j]);
+		i = i - j + 1;
+	}
+	return (0);
 }

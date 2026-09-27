@@ -6,23 +6,39 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 17:50:43 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/23 17:51:38 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/09/27 14:43:28 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-char	*trim(char *s)
+static int	ft_isspace(char c)
 {
-    char	sp;
-    
-    sp = ' ';
-	return (ft_memmove(s, &sp, ft_strlen(s) + 1));
+	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
 int	ft_atoi(const char *nptr)
 {
-	return (0);
+	int	n;
+	int	sign;
+	int	i;
+
+	n = 0;
+	sign = 1;
+	i = 0;
+	while (ft_isspace(nptr[i]))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (nptr[i] && ft_isdigit(nptr[i]))
+	{
+		n *= n * 10;
+		n += nptr[i] - '0';
+		i++;
+	}
+	return (n * sign);
 }
-*/

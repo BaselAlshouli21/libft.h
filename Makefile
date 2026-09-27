@@ -1,8 +1,8 @@
 # -*- MakeFile -*-
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
 SRCS = $(wildcard *.c)
+CFLAGS = -Wall -Wextra -Werror -g
 OBJ_DIC = obj
 BIN_DIC = bin
 
