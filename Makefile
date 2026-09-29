@@ -13,7 +13,7 @@ TARGET = $(BIN_DIC)/libft
 all: $(TARGET)
 
 $(TARGET): $(OBJS) | $(BIN_DIC)
-	$(CC) $(CFLAGS) -lbsd $(OBJS) -o $(TARGET)
+	$(CC) $(CFLAGS) -lbsd $(OBJS) -o $(TARGET) 
 
 run: all
 	./$(TARGET) $(ARGS)
