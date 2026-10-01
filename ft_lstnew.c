@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/27 14:43:05 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/30 20:42:02 by balshoul         ###   ########.fr       */
+/*   Created: 2026/10/01 16:17:51 by balshoul          #+#    #+#             */
+/*   Updated: 2026/10/01 18:26:17 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void	*p;
+	t_list	*llist;
 
-	if (!nmemb || !size)
-		return (malloc(0));
-	p = malloc((size * nmemb) + 1);
-	if (!p)
+	llist = malloc(sizeof(t_list));
+	if (!llist)
 		return (NULL);
-	ft_bzero(p, (size * nmemb) + 1);
-	return (p);
+	llist->content = content;
+	llist->next = NULL;
+	return (llist);
 }
