@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
+/*   By: basil42 <basil42@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 18:26:37 by balshoul          #+#    #+#             */
-/*   Updated: 2026/10/01 18:33:28 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/03 00:35:33 by basil42          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    
+    if (!new || !lst)
+        return ;
+    new->next = *lst;
+    *lst = new;
 }
