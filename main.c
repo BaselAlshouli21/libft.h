@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: basil42 <basil42@student.42.fr>            +#+  +:+       +#+        */
+/*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:25:41 by balshoul          #+#    #+#             */
-/*   Updated: 2026/10/03 01:12:38 by basil42          ###   ########.fr       */
+/*   Updated: 2026/10/03 16:11:48 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "libft.h"
 
 int	main()
@@ -26,3 +27,4 @@ int	main()
     i = ft_lstsize(llst2);
     printf("%d", i);
 }
+*/
