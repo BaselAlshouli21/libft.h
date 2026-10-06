@@ -1,36 +1,70 @@
-# -*- MakeFile -*-
+CC		= cc
+CFLAGS	= -Wall -Wextra -Werror
+NAME	= libft.a
+OBJ_DIR	= obj
 
-CC = cc
-SRCS = $(wildcard *.c)
-CFLAGS = -Wall -Wextra -Werror -g
-OBJ_DIC = obj
-BIN_DIC = bin
+SRCS	= \
+	ft_atoi.c \
+	ft_bzero.c \
+	ft_calloc.c \
+	ft_isalnum.c \
+	ft_isalpha.c \
+	ft_isascii.c \
+	ft_isdigit.c \
+	ft_isprint.c \
+	ft_itoa.c \
+	ft_lstadd_back.c \
+	ft_lstadd_front.c \
+	ft_lstclear.c \
+	ft_lstdelone.c \
+	ft_lstiter.c \
+	ft_lstlast.c \
+	ft_lstmap.c \
+	ft_lstnew.c \
+	ft_lstsize.c \
+	ft_memchr.c \
+	ft_memcmp.c \
+	ft_memcpy.c \
+	ft_memmove.c \
+	ft_memset.c \
+	ft_putchar_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
+	ft_putstr_fd.c \
+	ft_split.c \
+	ft_strchr.c \
+	ft_strdup.c \
+	ft_striteri.c \
+	ft_strjoin.c \
+	ft_strlcat.c \
+	ft_strlcpy.c \
+	ft_strlen.c \
+	ft_strmapi.c \
+	ft_strncmp.c \
+	ft_strnstr.c \
+	ft_strrchr.c \
+	ft_strtrim.c \
+	ft_substr.c \
+	ft_tolower.c \
+	ft_toupper.c
 
-OBJS = $(SRCS:%.c=$(OBJ_DIC)/%.o)
+OBJS	= $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
-TARGET = $(BIN_DIC)/libft
+all: $(NAME)
 
-all: $(TARGET)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-$(TARGET): $(OBJS) | $(BIN_DIC)
-	$(CC) $(CFLAGS) -lbsd $(OBJS) -o $(TARGET) 
-
-run: all
-	./$(TARGET) $(ARGS)
-
-$(OBJ_DIC)/%.o: %.c | $(OBJ_DIC)
+$(OBJ_DIR)/%.o: %.c libft.h
+	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIC) $(BIN_DIC):
-	mkdir -p $@
-    
 clean:
-	rm -f $(OBJ_DIC)/*.o
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(TARGET)
-	rm -rf $(OBJ_DIC) $(BIN_DIC)
+	rm -f $(NAME) $(TEST)
 
 re: fclean all
 
-.PHONY: all clean fclean re run
+.PHONY: all test run clean fclean re

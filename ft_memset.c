@@ -6,7 +6,7 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 18:22:46 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/28 17:17:33 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 15:01:30 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*src;
+	unsigned char	*p;
+	unsigned char	ch;
 	size_t			i;
 
-	src = (unsigned char *)s;
+	ch = c;
+	p = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-		src[i++] = c;
-	return ((void *)src);
+	{
+		p[i] = ch;
+		i++;
+	}
+	return (s);
 }

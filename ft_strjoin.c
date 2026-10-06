@@ -6,7 +6,7 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:57:26 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/29 19:36:58 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 16:45:47 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(ptr, s1, s1_len);
 	ptr += s1_len;
 	ft_memcpy(ptr, s2, s2_len);
+	ptr += s2_len;
+	*ptr = 0;
 	return (str);
 }

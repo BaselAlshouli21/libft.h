@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: basil42 <basil42@student.42.fr>            +#+  +:+       +#+        */
+/*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 15:43:11 by balshoul          #+#    #+#             */
-/*   Updated: 2026/10/03 01:43:37 by basil42          ###   ########.fr       */
+/*   Updated: 2026/10/05 15:02:27 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
 
 typedef struct s_list
 {
@@ -73,5 +74,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					ft_isascii(int c);
+int					ft_isprint(int c);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 15:15:09 by balshoul          #+#    #+#             */
-/*   Updated: 2026/10/01 15:32:10 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 17:02:30 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 	{
-		str[i] = (*f)(i, str[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
 	str[i] = 0;

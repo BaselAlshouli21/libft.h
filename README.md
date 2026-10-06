@@ -42,9 +42,10 @@ Here are the external resources, documentation, and tutorials consulted during t
 ### Specific Functions & Documentation
 - **memcmp**: [GeeksforGeeks - memcmp in C](https://www.geeksforgeeks.org/c/memcmp-in-c/)
 - **strncmp**: [W3Schools - C strncmp Reference](https://www.w3schools.com/c/ref_string_strncmp.php) and manual pages (`man strncmp`)
+- **anything else was from the manual if it exist**
 
 ### Structs & Typedefs
 - [GeeksforGeeks - How to use typedef for struct in C](https://www.geeksforgeeks.org/c/how-to-use-typedef-for-struct-in-c/)
 
 ### AI Usage Disclosure
-Artificial intelligence tools were used during the drafting of this README file to format documentation and organize the structured resources. Additionally, it was consulted as a teacher but **DID NOT** solve anything directly, it gave only hints, explanations and reasonings when needed.
+Artificial intelligence tools were used during the drafting of this README file to format documentation and organize the structured resources. Additionally, it was consulted as a teacher but **DID NOT** solve anything directly, it gave only hints, explanations and reasonings when needed, additionally it saved much time when checking for errors as mention, only gave hints and not solving anything.

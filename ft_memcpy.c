@@ -6,7 +6,7 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 17:33:54 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/29 17:30:33 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 15:07:03 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*d;
 	size_t				i;
 
-	if (!n || dest == src)
-		return (dest);
+	if (!dest && !src)
+		return (NULL);
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
 	i = 0;

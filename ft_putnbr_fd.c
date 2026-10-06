@@ -6,7 +6,7 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 15:59:52 by balshoul          #+#    #+#             */
-/*   Updated: 2026/10/01 16:13:10 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 17:03:34 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
 	if (n < 0)
 	{
-		if (n == -2147483648)
-		{
-			ft_putstr_fd("-2147483648", fd);
-		}
 		ft_putchar_fd('-', fd);
 		n = -n;
 	}

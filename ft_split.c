@@ -6,7 +6,7 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:27:49 by balshoul          #+#    #+#             */
-/*   Updated: 2026/10/01 17:33:04 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 17:00:14 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words_count = count_words(s, c);
-	str_arr = (char **)malloc((sizeof(char *) * words_count) + 1);
+	str_arr = (char **)malloc(sizeof(char *) * (words_count + 1));
 	if (!str_arr)
 		return (NULL);
 	str_arr[words_count] = NULL;

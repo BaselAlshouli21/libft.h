@@ -6,18 +6,14 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 17:40:03 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/23 13:24:51 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 14:45:30 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

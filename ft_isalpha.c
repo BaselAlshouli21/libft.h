@@ -6,18 +6,14 @@
 /*   By: balshoul <balshoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 15:44:20 by balshoul          #+#    #+#             */
-/*   Updated: 2026/09/22 16:49:13 by balshoul         ###   ########.fr       */
+/*   Updated: 2026/10/05 14:45:15 by balshoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
