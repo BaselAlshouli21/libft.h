@@ -63,8 +63,8 @@ clean:
 	rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(NAME) $(TEST)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all test run clean fclean re
+.PHONY: all clean fclean re
